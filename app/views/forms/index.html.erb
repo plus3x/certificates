@@ -1,0 +1,61 @@
+<h1>Listing forms</h1>
+
+<table>
+  <tr>
+    <th>Type of sertificate</th>
+    <th>Type of legal entity</th>
+    <th>Company</th>
+    <th>Creator</th>
+    <th>Registered address</th>
+    <th>Actual address</th>
+    <th>Address on english</th>
+    <th>Phone</th>
+    <th>Fax</th>
+    <th>Email</th>
+    <th>Inn</th>
+    <th>Kpp</th>
+    <th>Ogrn</th>
+    <th>Bank</th>
+    <th>Current account</th>
+    <th>Correspondent account</th>
+    <th>Bik</th>
+    <th>Bank person</th>
+    <th>Auditors names</th>
+    <th>Categories list of works</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @forms.each do |form| %>
+  <tr>
+    <td><%= form.type_of_sertificate %></td>
+    <td><%= form.type_of_legal_entity %></td>
+    <td><%= form.company %></td>
+    <td><%= form.creator %></td>
+    <td><%= form.registered_address %></td>
+    <td><%= form.actual_address %></td>
+    <td><%= form.address_on_english %></td>
+    <td><%= form.phone %></td>
+    <td><%= form.fax %></td>
+    <td><%= form.email %></td>
+    <td><%= form.inn %></td>
+    <td><%= form.kpp %></td>
+    <td><%= form.ogrn %></td>
+    <td><%= form.bank %></td>
+    <td><%= form.current_account %></td>
+    <td><%= form.correspondent_account %></td>
+    <td><%= form.bik %></td>
+    <td><%= form.bank_person %></td>
+    <td><%= form.auditors_names %></td>
+    <td><%= form.categories_list_of_works %></td>
+    <td><%= link_to 'Show', form %></td>
+    <td><%= link_to 'Edit', edit_form_path(form) %></td>
+    <td><%= link_to 'Destroy', form, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Form', new_form_path %>

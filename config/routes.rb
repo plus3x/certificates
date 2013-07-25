@@ -1,4 +1,7 @@
 Certificates::Application.routes.draw do
+  resources :forms
+
+
   resources :categories
 
 

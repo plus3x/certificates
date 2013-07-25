@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  type_of_sertificate: MyString
+  type_of_legal_entity: MyString
+  company: MyString
+  creator: MyString
+  registered_address: MyString
+  actual_address: MyString
+  address_on_english: MyString
+  phone: MyString
+  fax: MyString
+  email: MyString
+  inn: MyString
+  kpp: MyString
+  ogrn: MyString
+  bank: MyString
+  current_account: MyString
+  correspondent_account: MyString
+  bik: MyString
+  bank_person: MyString
+  auditors_names: MyString
+  categories_list_of_works: MyString
+
+two:
+  type_of_sertificate: MyString
+  type_of_legal_entity: MyString
+  company: MyString
+  creator: MyString
+  registered_address: MyString
+  actual_address: MyString
+  address_on_english: MyString
+  phone: MyString
+  fax: MyString
+  email: MyString
+  inn: MyString
+  kpp: MyString
+  ogrn: MyString
+  bank: MyString
+  current_account: MyString
+  correspondent_account: MyString
+  bik: MyString
+  bank_person: MyString
+  auditors_names: MyString
+  categories_list_of_works: MyString
