@@ -6,9 +6,27 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
-
+<body id="<%= controller.controller_name %>">
+  <div id="banner">
+    <% image_tag("logo.png") %>
+    <%= @page_title || "Сертификаты" %>
+  </div>
+  <div id="columns">
+    <div id="side"> 
+      <ul>
+        <%= content_tag(:li, link_to("Домашняя страница", home_path, :id => ("current_page" if controller.controller_name == 'home') ) ) %>
+        <%= content_tag(:li, link_to("Формы", forms_path, :id => ("current_page" if controller.controller_name == 'forms') ) ) %>
+        <%= content_tag(:li, link_to("Категории", categories_path, :id => ("current_page" if controller.controller_name == 'categories') ) ) %>
+      </ul>
+    </div>
+    <div id="main"> 
+    
+      <%= yield %>
+    
+    </div>
+    <div id="footer">
+      Copyright by Vladislav Petrov 2013
+    </div>
+  </div>
 </body>
 </html>
