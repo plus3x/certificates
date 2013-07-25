@@ -15,8 +15,9 @@
     <div id="side"> 
       <ul>
         <%= content_tag(:li, link_to("Домашняя страница", home_path, :id => ("current_page" if controller.controller_name == 'home') ) ) %>
-        <%= content_tag(:li, link_to("Формы", forms_path, :id => ("current_page" if controller.controller_name == 'forms') ) ) %>
-        <%= content_tag(:li, link_to("Категории", categories_path, :id => ("current_page" if controller.controller_name == 'categories') ) ) %>
+        <%= content_tag(:li, link_to("Формы",            forms_path, :id => ("current_page" if controller.controller_name == 'forms') ) ) %>
+        <%= content_tag(:li, link_to("Категории",   categories_path, :id => ("current_page" if controller.controller_name == 'categories') ) ) %>
+        <%= content_tag(:li, link_to("Категоря", categories_of_certificate_types_path, :id => ("current_page" if controller.controller_name == 'categories_of_certificate_types') ) ) %>
       </ul>
     </div>
     <div id="main"> 

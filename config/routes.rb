@@ -1,5 +1,8 @@
 Certificates::Application.routes.draw do
   
+  resources :categories_of_certificate_types
+
+
   get "home/index"
 
   resources :forms

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @categories_of_certificate_type.name %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @categories_of_certificate_type.price %>
+</p>
+
+
+<%= link_to 'Edit', edit_categories_of_certificate_type_path(@categories_of_certificate_type) %> |
+<%= link_to 'Back', categories_of_certificate_types_path %>

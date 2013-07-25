@@ -24,5 +24,13 @@ class CreateForms < ActiveRecord::Migration
 
       t.timestamps
     end
+    
+    create_table :categories_of_certificate_types do |t|
+      t.belongs_to :form
+      t.string :name
+      t.decimal :price
+
+      t.timestamps
+    end
   end
 end

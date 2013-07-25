@@ -11,11 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130725205730) do
+ActiveRecord::Schema.define(:version => 20130725221132) do
 
   create_table "categories", :force => true do |t|
     t.string   "path"
     t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "categories_of_certificate_types", :force => true do |t|
+    t.string   "name"
+    t.decimal  "price"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -43,6 +50,11 @@ ActiveRecord::Schema.define(:version => 20130725205730) do
     t.string   "categories_list_of_works"
     t.datetime "created_at",               :null => false
     t.datetime "updated_at",               :null => false
+  end
+
+  create_table "forms_names", :id => false, :force => true do |t|
+    t.integer "type_of_sertificate"
+    t.integer "name"
   end
 
 end
