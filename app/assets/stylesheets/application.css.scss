@@ -21,9 +21,16 @@ body {
     margin: 0px;
     font: small-caps 42px/42px "Times New Roman", serif;
     color: white;
-    text-align: left;
-    text-align: bottom;
+    text-align: left-bottom;
     img { float: left; }
+    #language {
+      float: right;
+      margin-right: 10px;
+      font: 16px/16px "Arial";
+      color: black;
+      text-align: top-right;
+      a { text-decoration: none; }
+    }
   }
 
   #columns {

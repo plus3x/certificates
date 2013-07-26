@@ -9,14 +9,18 @@
 <body id="<%= controller.controller_name %>">
   <div id="banner">
     <% image_tag("logo.png") %>
-    <%= @page_title || "Сертификаты" %>
+    <%= @page_title || t('.title') %>
+    <div id="language">
+      <%= link_to('english', url_for(locale: 'en')) %> |
+      <%= link_to('russian', url_for(locale: 'ru')) %>
+    </div>
   </div>
   <div id="columns">
     <div id="side"> 
       <ul>
-        <%= content_tag(:li, link_to("Домашняя страница", home_path, :id => ("current_page" if controller.controller_name == 'home') ) ) %>
-        <%= content_tag(:li, link_to("Формы", forms_path, :id => ("current_page" if controller.controller_name == 'forms') ) ) %>
-        <%= content_tag(:li, link_to("Категории", categories_path, :id => ("current_page" if controller.controller_name == 'categories') ) ) %>
+        <%= content_tag(:li, link_to(t('.home_page'), home_path, :id => ("current_page" if controller.controller_name == 'home') ) ) %>
+        <%= content_tag(:li, link_to(t('.forms_page'), forms_path, :id => ("current_page" if controller.controller_name == 'forms') ) ) %>
+        <%= content_tag(:li, link_to(t('.categories_page'), categories_path, :id => ("current_page" if controller.controller_name == 'categories') ) ) %>
       </ul>
     </div>
     <div id="main"> 

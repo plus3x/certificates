@@ -2,8 +2,12 @@ Certificates::Application.routes.draw do
   
   get "home/index"
 
-  resources :forms
-  resources :categories
+  scope '(:locale)' do
+    resources :forms
+    resources :categories
+    
+    root :to => 'home#index', as: 'home'
+  end
 
 
   # The priority is based upon order of creation:
